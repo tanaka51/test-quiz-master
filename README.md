@@ -7,7 +7,7 @@ Quiz Master is Quipper's technical test. It is a standard Ruby-on-Rails app usin
 
 1. Create a fork of this repository on your own personal Github account.
 
-2. Download your fork, start rails server, and being making your changes.
+2. Download your fork, start rails server, and begin making your changes.
 
 3. When you are finished, create a pull request to merge into Quipper's version, and then send us an email to let us know you're ready for review.
 
