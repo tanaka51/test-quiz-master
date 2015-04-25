@@ -32,3 +32,5 @@ Quiz Master is Quipper's technical test. It is a standard Ruby-on-Rails app usin
 2. You can change the interface in any way that you feel may improve the user experience.
 
 3. If you do not like or are not used to HAML, SASS, CoffeeScript etc, you can use whichever technologies you feel more comfortable with.
+
+4. If you want to submit privately, you can also submit your attempt by sending changes in patches(use `git format-patch`).
