@@ -1,6 +1,6 @@
 # Quiz Master!
 
-Quiz Master is Quipper's technical test. It is a standard Ruby-on-Rails app using RSpec test framework. The website allows users to create test questions and answers.
+Quiz Master is Quipper's technical test. It is a single page Ruby-on-Rails app with MarionetteJS front end. The website allows users to create test questions and answers.
 
 
 ## To attempt and submit this test.
@@ -21,15 +21,17 @@ If you'd prefer, you may email us your commits using `git format-patch`.
 
 2. The Rspec tests currently fail. Please finish the model so that the tests pass.
 
-3. The site's implementation is missing tests. Please provide either controller specs and/or feature specs to test the implementation.
+3. The API and front end are missing some tests. Please provide either controller specs and/or feature specs to test the implementation.
 
 4. Currently the question text is merely plain text. Please add the ability for users to provide some simple formatting.
+
+5. If you have spare time and are feeling creative, you can upgrade the site's usability and appearance in any other way you see fit.
 
 
 ## Notes
 
-1. You can add any gems that you think are useful for completing the test and improving the site.
+1. You can add any gems or JS libraries that you think are useful for completing the test and improving the site.
 
 2. You can change the interface in any way that you feel may improve the user experience.
 
-3. If you do not like or are not used to HAML, SASS, CoffeeScript etc, you can use whichever technologies you feel more comfortable with.
+3. You can use whichever technologies you see fit, for example if you prefer Handlebars to JST, or if you prefer ECMAScript6 to CoffeeScript.
