@@ -1,0 +1,16 @@
+= form_for @question do |f|
+
+  - if @question.errors.present?
+    .alert.alert-danger
+      - @question.errors.full_messages.each do |message|
+        .message= message
+
+  .form-group
+    = f.label :question
+    = f.text_field :question, class: 'form-control'
+
+  .form-group
+    = f.label :answer
+    = f.text_field :answer, class: 'form-control'
+
+  = f.submit nil, class: 'btn btn-primary'
