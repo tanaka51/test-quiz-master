@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_filter :find_question, only: [:show, :edit, :update]
+  before_filter :find_question, only: [:show, :edit, :update, :answer]
 
   def index
     @questions = Question.all
@@ -27,7 +27,14 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    # TODO
+    message =
+      if @question.is_correct?(params[:answer][:answer])
+        'right!'
+      else
+        'wrong...'
+      end
+
+    redirect_to question_path(@question), notice: message
   end
 
   private
