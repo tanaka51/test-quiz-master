@@ -32,4 +32,6 @@ gem 'haml-rails'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'pry-nav'
 end
