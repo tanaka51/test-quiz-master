@@ -22,6 +22,25 @@ feature 'Question' do
     expect(page.current_path).to eq '/questions'
   end
 
+  scenario 'create question with decorated question' do
+    create_question(q: "What's the most **powerful** editor?", a: 'vim')
+
+    # not decorated
+    expect(page).to have_link "What's the most **powerful** editor?"
+
+    click_link "What's the most **powerful** editor?"
+
+    within('#question') do
+      # decorated
+      expect(page).to have_content "What's the most powerful editor?"
+
+      # with `strong` tag
+      within('strong') do
+        expect(page).to have_content 'powerful'
+      end
+    end
+  end
+
   scenario 'answer the question with a right submission' do
     create_question(q: 'editor', a: 'vim')
 
