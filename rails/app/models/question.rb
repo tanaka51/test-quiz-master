@@ -4,7 +4,16 @@ class Question < ActiveRecord::Base
   validates_presence_of :answer
 
   def is_correct?(submission)
-    answer == submission
+    sanitize(answer) == sanitize(submission)
   end
 
+  private
+
+  def sanitize(string)
+    string.
+      gsub(/\s{2,}/, ' ').
+      gsub(/\d+/){ |d| d.to_i.humanize }.
+      strip.
+      downcase
+  end
 end
