@@ -48,7 +48,7 @@ feature 'Question' do
     fill_in 'answer_answer', with: 'vim'
     click_button 'Submit answer'
 
-    expect(page).to have_content 'right!'
+    expect(page).to have_content 'vim is right!'
   end
 
   scenario 'answer the question with a wrong submission' do
@@ -58,7 +58,7 @@ feature 'Question' do
     fill_in 'answer_answer', with: 'emacs'
     click_button 'Submit answer'
 
-    expect(page).to have_content 'wrong...'
+    expect(page).to have_content 'emacs is wrong...'
   end
 end
 

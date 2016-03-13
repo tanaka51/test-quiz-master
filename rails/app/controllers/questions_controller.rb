@@ -27,14 +27,16 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    message =
-      if @question.correct?(params[:answer][:answer])
+    answer = params[:answer][:answer]
+
+    result =
+      if @question.correct?(answer)
         'right!'
       else
         'wrong...'
       end
 
-    redirect_to question_path(@question), notice: message
+    redirect_to question_path(@question), notice: "#{answer} is #{result}"
   end
 
   private
