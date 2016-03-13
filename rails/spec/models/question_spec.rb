@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 describe Question, :type => :model do
-  describe '#is_correct?' do
-    subject { question.is_correct?(submission) }
+  describe '#correct?' do
+    subject { question.correct?(submission) }
 
     let(:question) { build(:question, answer: answer) }
 

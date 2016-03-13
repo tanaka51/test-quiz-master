@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
 
   def answer
     message =
-      if @question.is_correct?(params[:answer][:answer])
+      if @question.correct?(params[:answer][:answer])
         'right!'
       else
         'wrong...'
